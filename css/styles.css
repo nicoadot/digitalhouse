@@ -91,19 +91,19 @@ h6 {
   font-size: 0.7em;
 }
 input, select, textarea {
-  color: #e5474b;
+  color: #B33C3F;
 }
 
 a {
-  color: #e5474b;
+  color: #B33C3F;
 }
 
 strong, b {
-  color: #e5474b;
+  color: #B33C3F;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #e5474b;
+  color: #B33C3F;
 }
 
 .box {
@@ -196,7 +196,7 @@ button,
   padding: 0;
   position: absolute;
   top: 0;
-  color: #e5474b;
+  color: #B33C3F;
   font-size: 1.75em;
   text-transform: none;
   font-weight: normal;
@@ -241,10 +241,10 @@ button,
 }
 
 .registro{
-  background-color: #e5474b;
+  background-color: #B33C3F;
   color: #f2a3a5;
   padding: 4em 0 2em 0;
-  background: #e5474b;
+  background: #B33C3F;
 }
 
 .navPanelToggle {
@@ -371,7 +371,7 @@ button,
 
 
 #banner {
-	background-color: #e5474b;
+	background-color: #B33C3F;
 	color: #f2a3a5;
 	padding: 13em 0 11em 0;
 	background-color: #0c0c0c;
@@ -440,7 +440,7 @@ button,
 #banner button.special,
 #banner .boton.special {
 background-color: #ffffff;
-color: #e5474b !important;
+color: #B33C3F !important;
 }
 
 input[type="button"]:hover,
@@ -495,8 +495,8 @@ input[type="button"].alt,
 button.alt,
 .boton.alt {
   background-color: transparent;
-  box-shadow: inset 0 0 0 2px #e5474b;
-  color: #e5474b !important;
+  box-shadow: inset 0 0 0 2px #B33C3F;
+  color: #B33C3F !important;
 }
 
 input[type="button"].alt:hover,
@@ -520,7 +520,7 @@ button.alt.icon:before,
 input[type="button"].special,
 button.special,
 .boton.special {
-  background-color: #e5474b;
+  background-color: #B33C3F;
   color: #ffffff !important;
 }
 
@@ -736,10 +736,10 @@ body {
 }
 
 #footer {
-  background-color: #e5474b;
+  background-color: #B33C3F;
   color: #f2a3a5;
   padding: 4em 0 2em 0;
-  background: #e5474b;
+  background: #B33C3F;
 }
 #footer input, #footer textarea {
   color: #ffffff;
@@ -819,7 +819,7 @@ body {
 #footer button.special,
 #footer .boton.special {
   background-color: #ffffff;
-  color: #e5474b !important;
+  color: #B33C3F !important;
 }
 
 #footer label {
@@ -1131,7 +1131,7 @@ padding: 0;
 }
 
 #footer .copyright a {
-  color: #f2a3a5;
+  color: #B33C3F;
 }
 
 @media screen and (max-width: 980px) {
