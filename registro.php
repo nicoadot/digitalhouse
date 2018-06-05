@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include ('funciones.php');
 $nombre = $apellido = $mail = $pass = "";
 $errorNombre = $errorApellido = $errorMail = $errorPass = "";
