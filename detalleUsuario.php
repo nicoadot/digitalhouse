@@ -3,13 +3,15 @@ session_start();
 include ('funciones.php');
 $nombre = $apellido = $mail = $pass = "";
 $errorNombre = $errorApellido = $errorMail = $errorPass = "";
-$user = "ACCEDER";
-$validado =  true;
 if(isset($_SESSION['login']))
 {
   $user = $_SESSION["nombre"];
-  header("Location: detalleUsuario.php");
+  $nombre =  $_SESSION["nombre"];
+  $apellido =  $_SESSION["apellido"];
+  $mail =  $_SESSION["login"];
 }
+$validado =  true;
+
 if($_POST)
 {
   if(!isset($_POST["nombre"]))
@@ -37,27 +39,6 @@ if($_POST)
   }
   else
     $apellido = trim(($_POST["apellido"]));
-
-  if(!isset($_POST["mail"]))
-  {
-    $errorMail = "Por favor, ingrese un Mail";
-    $validado =  false;
-  }
-  else if(strlen(trim(($_POST["mail"]))) ==0 || (!filter_var($_POST["mail"], FILTER_VALIDATE_EMAIL)) )
-  {
-    $errorMail = "Por favor, ingrese un Mail válido";
-    $validado =  false;
-  }
-
-  else if(mailExistente(trim($_POST["mail"])))
-  {
-    $errorMail = "El mail cargado ya se encuentra registrado";
-    $mail = trim(($_POST["mail"]));
-    $validado = false;
-  }
-
-  else
-    $mail = trim(($_POST["mail"]));
 
   if(!isset($_POST["password"]))
   {
@@ -94,7 +75,7 @@ if($_POST)
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="css/styles.css" />
-    <title>London Bikes - Registro</title>
+    <title>London Bikes - Usuario</title>
   </head>
   <body>
     <header id="header">
@@ -104,8 +85,7 @@ if($_POST)
           <a href="index.php">Home</a>
           <a href="nosotros.php">Nosotros</a>
           <a href="market.php">Market</a>
-          <a href="registro.php"  style="text-decoration:underline">Registrarse</a>
-          <a href="login.php"><label id="lblUser"><?php echo $user ?></label></a>
+          <a href="login.php" style="text-decoration:underline"><label id="lblUser"><?php echo $user ?></label></a>
         </nav>
       </div>
     </header>
@@ -113,34 +93,32 @@ if($_POST)
     <section id="bloquePrincipal" >
       <div class="angosto">
         <header class="">
-          <h1>Registro</h1>
+          <h1>Usuario</h1>
         </header>
         <div class="angosto">
           <form class="" action="registro.php" method="post">
-            <div class="">
-              <div class="campo medio primero">
-                <label for="name">Nombre</label>
-                <input type="text" name="nombre" id="nombre"  value="<?php echo $nombre;?>" />
-                <span><?php echo $errorNombre; ?></span>
-              </div>
-              <div class="campo medio">
-                <label for="apellido">Apellido</label>
-                <input type="text" name="apellido" id="apellido"  value="<?php echo $apellido;?>" />
-                <span><?php echo $errorApellido; ?></span>
-              </div>
-              <div class="campo medio primero">
-                <label for="mail">Mail</label>
-                <input type="text" name="mail" id="mail" placeholder="juan@dominio.com.ar"  value="<?php echo $mail;?>" />
-                <span><?php echo $errorMail; ?></span>
-              </div>
-              <div class="campo medio">
-                  <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Debe tener al menos 8 caracteres alfanumericos" />
-                <span><?php echo $errorPass; ?></span>
-              </div>
+            <div class="campo medio primero">
+              <label for="name">Nombre</label>
+              <input type="text" name="nombre" id="nombre"  value="<?php echo $nombre;?>" />
+              <span><?php echo $errorNombre; ?></span>
             </div>
-            <div style="display: block">
-              <input type="submit" name="registrar" value="ACEPTAR" class="boton" style="margin-top:20px">
+            <div class="campo medio">
+              <label for="apellido">Apellido</label>
+              <input type="text" name="apellido" id="apellido"  value="<?php echo $apellido;?>" />
+              <span><?php echo $errorApellido; ?></span>
+            </div>
+            <div class="campo medio primero">
+              <label for="mail">Mail</label>
+              <input type="text" name="mail" id="mail" placeholder="juan@dominio.com.ar"  value="<?php echo $mail;?>" />
+              <span><?php echo $errorMail; ?></span>
+            </div>
+            <div class="campo medio">
+                <label for="password">Password</label>
+              <input type="password" name="password" id="password" placeholder="Debe tener al menos 8 caracteres alfanumericos" />
+              <span><?php echo $errorPass; ?></span>
+            </div>
+            <div class="">
+              <input type="submit" name="registrar" value="ACEPTAR" class="boton alt">
             </div>
           </form>
         </div>

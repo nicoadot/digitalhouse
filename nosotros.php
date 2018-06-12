@@ -1,5 +1,10 @@
 <?php
 session_start();
+$user = "ACCEDER";
+if(isset($_SESSION['login']))
+{
+  $user = $_SESSION["nombre"];
+}
 
  ?>
 
@@ -23,6 +28,7 @@ session_start();
           <a href="nosotros.php" style="text-decoration:underline">Nosotros</a>
           <a href="market.php">Market</a>
           <a href="registro.php">Registrarse</a>
+          <a href="login.php"><label id="lblUser" text="ACCEDER">ACCEDER</label></a>
         </nav>
       </div>
     </header>
@@ -44,30 +50,8 @@ session_start();
     </section>
 
     <section id="footer">
-      <div class="angosto">
-        <header>
-          <h2>CONTACTO!</h2>
-        </header>
-        <form method="post" action="#">
-          <div class="campo medio primero">
-            <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" />
-          </div>
-          <div class="campo medio">
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" />
-          </div>
-          <div class="campo">
-            <label for="message">Mensaje</label>
-            <textarea name="message" id="message" rows="6"></textarea>
-          </div>
-          <ul class="mas">
-            <li><input type="submit" value="CONTACTAR!" class="boton alt" /></li>
-          </ul>
-        </form>
-        <div class="copyright">
-          &copy; EANA Desing
-        </div>
+      <div class="angosto" style="top:0">
+          <a  href="#" class="imagen "><img src="imagenes/map.jpg" alt="" /></a>
       </div>
     </section>
   </body>

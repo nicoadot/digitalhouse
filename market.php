@@ -1,6 +1,13 @@
 <?php
 session_start();
-
+$user = "ACCEDER";
+if(!isset($_SESSION['login'])){ //if login in session is not set
+    header("Location: login.php");
+}
+if(isset($_SESSION['login']))
+{
+  $user = $_SESSION["nombre"];
+}
  ?>
 
 <!DOCTYPE HTML>
@@ -20,6 +27,7 @@ session_start();
           <a href="nosotros.php">Nosotros</a>
           <a href="market.php" style="text-decoration:underline">Market</a>
           <a href="registro.php">Registrarse</a>
+          <a href="login.php" ><label id="lblUser"><?php echo $user ?></label></a>
         </nav>
       </div>
     </header>

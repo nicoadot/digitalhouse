@@ -1,6 +1,10 @@
 <?php
 session_start();
-
+$user = "ACCEDER";
+if(isset($_SESSION['login']))
+{
+  $user = $_SESSION["nombre"];
+}
  ?>
 
 
@@ -21,7 +25,7 @@ session_start();
           <a href="nosotros.php">Nosotros</a>
           <a href="market.php">Market</a>
           <a href="registro.php">Registrarse</a>
-          <a href="login.php"><label id="lblUser" text="ACCEDER">ACCEDER</label></a>
+          <a href="login.php"><label id="lblUser"><?php echo $user ?></label></a>
         </nav>
       </div>
     </header>
