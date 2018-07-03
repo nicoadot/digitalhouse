@@ -26,8 +26,9 @@ if(isset($_SESSION['login']))
           <a href="index.php">Home</a>
           <a href="nosotros.php">Nosotros</a>
           <a href="market.php" style="text-decoration:underline">Market</a>
-          <a href="registro.php">Registrarse</a>
-          <a href="login.php" ><label id="lblUser"><?php echo $user ?></label></a>
+          <a href="login.php" ><label id="lblUser"> <strong><?php echo $user ?></strong></label></a>
+          <?php if(isset($_SESSION["login"]))
+              echo( "<a href='logout.php' >Salir</a>");  ?>
         </nav>
       </div>
     </header>
@@ -37,7 +38,7 @@ if(isset($_SESSION['login']))
       <div class="angosto">
         <header>
           <h1>MARKET!</h1>
-          <p>Bienvenido al e-shop de London Bikes</p>
+          <p>Bienvenido <strong> <?php echo strtoupper ($user); ?> </strong>al e-shop de London Bikes</p>
         </header>
 
       <section>

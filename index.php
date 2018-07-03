@@ -7,13 +7,13 @@ if(isset($_SESSION['login']))
 }
  ?>
 
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="css/styles.css" />
+    <link rel="" href="css/font-awesome.min.css">
     <title>London Bikes - Home</title>
   </head>
   <body>
@@ -24,8 +24,9 @@ if(isset($_SESSION['login']))
           <a href="index.php" style="text-decoration:underline">Home</a>
           <a href="nosotros.php">Nosotros</a>
           <a href="market.php">Market</a>
-          <a href="registro.php">Registrarse</a>
-          <a href="login.php"><label id="lblUser"><?php echo $user ?></label></a>
+          <a href="login.php" ><label id="lblUser"> <strong><?php echo $user ?></strong></label></a>
+          <?php if(isset($_SESSION["login"]))
+              echo( "<a href='logout.php' >Salir</a>");  ?>
         </nav>
       </div>
     </header>
@@ -59,7 +60,7 @@ if(isset($_SESSION['login']))
             lúdicos o didácticos. A los términos eco-friendly y eco-geek sumamos el eco-fun.
         </p>
         <ul class="mas">
-          <li><a href="nosotros.html" class="boton alt">MAS INFO.</a></li>
+          <li><a href="nosotros.php" class="boton alt">MAS INFO.</a></li>
         </ul>
       </div>
     </section>
@@ -125,6 +126,7 @@ if(isset($_SESSION['login']))
 
     <section id="footer">
       <div class="angosto">
+        <a href="frecuentes.php"> F.A.Q.</a>
         <header>
           <h2>CONTACTO!</h2>
         </header>

@@ -11,11 +11,11 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>London Bikes - Nosotros</title>
+		<title>London Bikes - F.A.Q.</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="css/styles.css" />
-    <title>London Bikes - Nosotros</title>
+    <title>London Bikes - F.A.Q.</title>
 	</head>
 
 	<body>
@@ -37,15 +37,41 @@
     <section id="bloquePrincipal" >
       <div class="angosto">
         <header class="">
-          <h1>Nosotros</h1>
-          <p>Los que amamos las bicicletas!</p>
+          <h1>Preguntas Frecuentes!</h1>
         </header>
-        <a href="#" class="imagen fit"><img src="imagenes/wall4.jpg" alt="" /></a>
-        <p>Pedaleamos por diversión. Pedaleamos por deporte. Pedaleamos para ir de aquí para allá, para liberarnos de la rutina diaria y para hacer de nuestro mundo un lugar mejor a través de las bicicletas. A veces pedaleamos sin ninguna razón en absoluto.
-          Pedaleamos porque amamos cómo al movernos en bicicleta se crea una brisa fresca en una mañana y por cómo, después de un largo día de trabajo, al subir a una bicicleta nos hace sentir como si el día recién comenzara. Pedaleamos para que nuestros niños puedan disfrutar del simple placer de las aventuras en dos ruedas por el barrio. Pedaleamos para hacer los lugares conocidos nuevos otra vez.
+        <p>
+          <strong>
+              * Cómo puedo averiguar el precio de una bicicleta?
+          </strong>
         </p>
-        <p>	www.pleopleforbikes.org</p>
-        <p>Proporcionamos un frente unificado para la defensa de ciclismo a nivel nacional, un centro estratégico para asegurar la colaboración entre cada pieza en el movimiento de andar en bicicleta, y la capacidad de soportar los esfuerzos locales a través de nuestros recursos financieros, la comunidad y la comunicación.</p>
+        <p>
+          Podes contactarnos via mail ventas@londonbikes.com o registrandote en el sitio, accediendo al Market!
+        </p>
+        <p>
+          <strong>
+              * Hacen envios?
+          </strong>
+        </p>
+        <p>
+          Si! A todo el pais! Las tarifas se comunican al realizar la venta!
+        </p>
+        <p>
+          <strong>
+              * Brindan asesoramiento?
+          </strong>
+        </p>
+        <p>
+          Si! Contamos con un personal dispuesto a respoder todas tus consultas y
+          lograr que des con la bicicleta que estas buscando!
+        </p>
+        <p>
+          <strong>
+              * Las bicis tienen garantia?
+          </strong>
+        </p>
+        <p>
+          Si! Todos nuestros productos tienen garantia oficial!
+        </p>
       </div>
     </section>
 

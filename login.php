@@ -5,6 +5,11 @@ $errorLogin = "";
 $user= [];
 $usuario = "ACCEDER";
 $validado = false;
+if(isset($_SESSION['login']))
+{
+  $user = $_SESSION["nombre"];
+  header("Location: detalleUsuario.php");
+}
 if($_POST)
 {
   if(!isset($_POST["user"]))
@@ -32,11 +37,10 @@ if($_POST)
     $_SESSION["nombre"] = $user["nombre"];
     $_SESSION["apellido"] = $user["apellido"];
     $usuario = $_SESSION["nombre"];
+    header("Location: index.php");
   }
 }
  ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -54,15 +58,17 @@ if($_POST)
           <a href="index.php">Home</a>
           <a href="nosotros.php">Nosotros</a>
           <a href="market.php">Market</a>
-          <a href="registro.php" >Registrarse</a>
-          <a href="login.php" style="text-decoration:underline"><label id="lblUser"><?php echo $usuario ?></label></a>
+          <a href="login.php" style="text-decoration:underline"><label id="lblUser"> <strong><?php echo $usuario ?></strong></label></a>
+          <?php if(isset($_SESSION["login"]))
+              echo( "<a href='logout.php' >Salir</a>");  ?>
         </nav>
       </div>
     </header>
     <a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
     <section id="bloquePrincipal" >
       <div class="angosto">
-        <header class="">
+        <header class="angosto">
+          <span>No sos miembro? <strong><a href="registro.php">REGISTRARSE</a></strong> </span>
           <h1>ACCEDER</h1>
         </header>
         <div class="angosto">
@@ -75,6 +81,7 @@ if($_POST)
               <label for="password">Password</label>
               <input type="password" name="password" id="password"/>
             </div>
+
             <span><?php echo $errorLogin; ?></span>
             <div style="padding-top:10px">
               <input type="submit" name="registrar" value="ACCEDER" class="boton alt">
@@ -85,7 +92,7 @@ if($_POST)
     </section>
     <section id="footer">
       <div class="angosto" style="top:0">
-          <a  href="#" class="imagen"><img src="imagenes/redes11.png" alt="" /></a>
+          
       </div>
     </section>
       </body>

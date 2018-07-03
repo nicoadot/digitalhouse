@@ -112,7 +112,7 @@ if($_POST)
     <a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
     <section id="bloquePrincipal" >
       <div class="angosto">
-        <header class="">
+        <header class="angosto">
           <h1>Registro</h1>
         </header>
         <div class="angosto">
@@ -148,7 +148,15 @@ if($_POST)
     </section>
     <section id="footer">
       <div class="angosto" style="top:0">
-          <a  href="#" class="imagen"><img src="imagenes/redes11.png" alt="" /></a>
+        <h4>SOCIAL!</h4>
+        <ul class="icons">
+          <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+          <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+          <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+          <li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
+        </ul>
       </div>
     </section>
       </body>

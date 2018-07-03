@@ -7,7 +7,7 @@ if(isset($_SESSION['login']))
 {
   $user = $_SESSION["nombre"];
   $nombre =  $_SESSION["nombre"];
-  $apellido =  $_SESSION["apellido"];
+  $apellido = $_SESSION["apellido"];
   $mail =  $_SESSION["login"];
 }
 $validado =  true;
@@ -53,8 +53,6 @@ if($_POST)
   else
     $pass = trim(($_POST["password"]));
 
-
-
   if($validado)
   {
     $_POST["nombre"] = $nombre;
@@ -64,7 +62,6 @@ if($_POST)
     registrarUsuario($_POST);
 
   }
-
 }
 
  ?>
@@ -85,14 +82,16 @@ if($_POST)
           <a href="index.php">Home</a>
           <a href="nosotros.php">Nosotros</a>
           <a href="market.php">Market</a>
-          <a href="login.php" style="text-decoration:underline"><label id="lblUser"><?php echo $user ?></label></a>
+          <a href="login.php" style="text-decoration:underline"><label id="lblUser"><strong><?php echo $user ?></strong></label></a>
+          <?php if($_SESSION["login"])
+              echo( "<a href='logout.php' >Salir</a>");  ?>
         </nav>
       </div>
     </header>
     <a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
     <section id="bloquePrincipal" >
       <div class="angosto">
-        <header class="">
+        <header class="angosto">
           <h1>Usuario</h1>
         </header>
         <div class="angosto">
@@ -113,7 +112,7 @@ if($_POST)
               <span><?php echo $errorMail; ?></span>
             </div>
             <div class="campo medio">
-                <label for="password">Password</label>
+                <label for="password">Nueva Password</label>
               <input type="password" name="password" id="password" placeholder="Debe tener al menos 8 caracteres alfanumericos" />
               <span><?php echo $errorPass; ?></span>
             </div>
